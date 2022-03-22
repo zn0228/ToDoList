@@ -1,23 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
 #head {
-  height: 400px;
+  height: 300px;
   width: max;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("patton.jpg");
+  background-size: cover;
+  position: relative;
+  border-bottom: 2px;
 }
 
-#title {
-  font-family: "Bungee", cursive;
-}
 #input_box {
   height: 40px;
   width: 340px;
   display: flex;
   justify-content: center;
-  box-shadow: 0 0 3px 3px rgb(211, 211, 211);
+  position: absolute;
+  top: 220px;
+}
+
+#title {
+  font-family: "Bungee", cursive;
+
+  font-size: 50px;
+  position: absolute;
+  top: 30px;
 }
 
 #plus_button {
@@ -29,6 +39,8 @@
   width: 300px;
   border: 0;
   margin-right: -5px;
+  border: none;
+  outline: none;
 }
 #button {
   width: 40px;
