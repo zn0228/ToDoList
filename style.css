@@ -51,16 +51,19 @@
   border: 0;
 }
 
-#list {
-  font-size: larger;
-  font-family: "Bungee", cursive;
-  width: fit-content;
-  margin: 0;
-}
-
 #list_box {
-  height: max-content;
+  height: fit-content;
   width: max;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  font-size: 30px;
+  font-family: "Bungee", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
