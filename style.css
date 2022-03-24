@@ -52,14 +52,14 @@
 }
 
 #list_box {
-  height: fit-content;
+  height: 800px;
   width: max;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.list {
+#list {
   font-size: 30px;
   font-family: "Bungee", cursive;
 }
