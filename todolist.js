@@ -1,25 +1,18 @@
-const button = document.querySelector("#button");
+const list_box = document.getElementById("list");
+const input_box = document.getElementById("input_box");
+const input_in = input_box.querySelector("#input_in");
 
-const push_button = document.querySelector("#button");
-push_button.addEventListener("click", () => {
-  const input_box = document.querySelector("#input_in");
-  const text = input_box.value();
+const put = (event) => {
+  event.preventDefault();
+  addlist(input_in.value);
+  input_in.value = "";
+};
 
-  if (text !== "") {
-    add_list(text);
-    input_box.value = "";
-    input_box.focus();
-  }
-});
+const addlist = (text) => {
+  const newlist = document.createElement("li");
+  newlist.className = "list_item";
+  newlist.innerText = text;
+  list_box.appendChild(newlist);
+};
 
-// add_list.addEventListener("click",
-function add_list(text) {
-  const list = document.createElement("#list");
-
-  const new_list = document.createElement("li");
-  new_list.classList.add("list_item");
-
-  new_list.innerHTML = text;
-
-  list.appendChild(new_list);
-}
+input_box.addEventListener("submit", put);

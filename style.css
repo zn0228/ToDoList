@@ -59,7 +59,7 @@
   flex-direction: column;
 }
 
-#list {
+.list_item {
   font-size: 30px;
   font-family: "Bungee", cursive;
 }
