@@ -9,17 +9,19 @@ const put = (event) => {
 };
 
 const addlist = (text) => {
-  const newlist = document.createElement("li");
-  newlist.className = "list_item";
-  newlist.innerText = text;
-  list_box.appendChild(newlist);
-  const newDeleteButton = document.createElement("button");
+  if (text != "") {
+    const newlist = document.createElement("li");
+    newlist.className = "list_item";
+    newlist.innerText = text;
+    list_box.appendChild(newlist);
+    const newDeleteButton = document.createElement("button");
 
-  newDeleteButton.className = "delete_button";
-  newDeleteButton.innerText = "X";
-  newlist.appendChild(newDeleteButton);
-  // const delete_button = newDeleteButton.querySelector(".delete_button");
-  newDeleteButton.addEventListener("click", delete_list);
+    newDeleteButton.className = "delete_button";
+    newDeleteButton.innerText = "X";
+    newlist.appendChild(newDeleteButton);
+    // const delete_button = newDeleteButton.querySelector(".delete_button");
+    newDeleteButton.addEventListener("click", delete_list);
+  }
 };
 
 const delete_list = (event) => {
