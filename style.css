@@ -62,9 +62,13 @@
 .list_item {
   font-size: 30px;
   font-family: "Bungee", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .delete_button {
+  margin-left: 20px;
   height: 30px;
   width: 30px;
 }
