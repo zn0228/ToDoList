@@ -5,11 +5,17 @@ const input_in = input_box.querySelector("#input_in");
 const toDo = [];
 const put = (event) => {
   event.preventDefault();
-  toDp.push(input_in.value);
-  input_in.value = "";
+  if (input_in.value != "") {
+    toDo.push(input_in.value);
+    input_in.value = "";
+  }
 };
 
-const show = () => {};
+const addlist = (...toDo) => {
+  const newlist = document.createElement("li");
+  newlist.className = "list_item";
+};
+
 //   const put = (event) => {
 //     event.preventDefault();
 //     addlist(input_in.value);
