@@ -8,12 +8,17 @@ const put = (event) => {
   if (input_in.value != "") {
     toDo.push(input_in.value);
     input_in.value = "";
+    addlist();
   }
 };
 
-const addlist = (...toDo) => {
+const addlist = () => {
   const newlist = document.createElement("li");
   newlist.className = "list_item";
+  toDo.forEach((text, index, arr) => {
+    newlist.innerText = text;
+  });
+  list_box.appendChild(newlist);
 };
 
 //   const put = (event) => {
