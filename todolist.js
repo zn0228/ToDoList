@@ -13,12 +13,19 @@ const put = (event) => {
 };
 
 const addlist = () => {
-  const newlist = document.createElement("li");
-  newlist.className = "list_item";
-  toDo.forEach((text, index, arr) => {
+  list_box.innerHTML = "";
+  toDo.forEach((text) => {
+    const newlist = document.createElement("li");
+    newlist.className = "list_item";
     newlist.innerText = text;
+    list_box.appendChild(newlist);
+
+    const newDeleteButton = document.createElement("button");
+    newDeleteButton.className = "delete_button";
+    newDeleteButton.innerText = "X";
+    newlist.appendChild(newDeleteButton);
+    newDeleteButton.addEventListener("click", delete_list);
   });
-  list_box.appendChild(newlist);
 };
 
 //   const put = (event) => {
