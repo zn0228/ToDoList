@@ -14,7 +14,7 @@ const put = (event) => {
 
 const addlist = () => {
   list_box.innerHTML = "";
-  toDo.forEach((text) => {
+  toDo.forEach((text, index) => {
     const newlist = document.createElement("li");
     newlist.className = "list_item";
     newlist.innerText = text;
@@ -24,8 +24,13 @@ const addlist = () => {
     newDeleteButton.className = "delete_button";
     newDeleteButton.innerText = "X";
     newlist.appendChild(newDeleteButton);
-    newDeleteButton.addEventListener("click", delete_list);
+    newDeleteButton.addEventListener("click", () => delete_list(index));
   });
+};
+
+delete_list = (index) => {
+  toDo.splice(index, 1);
+  addlist();
 };
 
 //   const put = (event) => {
